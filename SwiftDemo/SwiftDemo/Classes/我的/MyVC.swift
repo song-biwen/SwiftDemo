@@ -16,45 +16,48 @@ class MyVC: UViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        navigationController?.title = "我的"
-        view.backgroundColor = UIColor.cyan
-        
-        lineView.frame = CGRect(x: 0, y: 100, width: screenWidth, height: 100)
-        lineView.backgroundColor = UIColor.clear
-        view.addSubview(lineView)
-        
-        
-        let leftTopShapeLayer = CAShapeLayer()
-        leftTopShapeLayer.fillColor = UIColor.yellow.cgColor
-        
-        let leftTopPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 100, height: 100), byRoundingCorners: .topLeft, cornerRadii: CGSize(width: 50, height: 50))
-        leftTopShapeLayer.path = leftTopPath.cgPath
-        
-        
-        let rightTopShapeLayer = CAShapeLayer()
-        rightTopShapeLayer.fillColor = UIColor.yellow.cgColor
-        
-        let rightTopPath = UIBezierPath(roundedRect: CGRect(x: 100, y: 0, width: screenWidth - 100, height: 100), byRoundingCorners: .topRight, cornerRadii: CGSize(width: 50, height: 50))
-        rightTopShapeLayer.path = rightTopPath.cgPath
-        
-        lineView.layer.addSublayer(leftTopShapeLayer)
-        lineView.layer.addSublayer(rightTopShapeLayer)
-        
-        
-        
-        
+        view.backgroundColor = UIColor.red
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func configNavigationBar() {
+        super.configNavigationBar()
+        guard let navi = navigationController as? UNavigationController else {return}
+        navi.barStyle(.clear)
+        navi.title = ""
     }
-    */
 
+    private lazy var tableView:UITableView = {
+        let tabView = UITableView(frame: .zero, style: .grouped)
+        tabView.delegate = self
+        tabView.dataSource = self
+        return tabView
+    }()
+
+}
+
+extension MyVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

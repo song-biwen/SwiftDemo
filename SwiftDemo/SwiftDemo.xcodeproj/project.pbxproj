@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430DF94D24D2C5FD000E2826 /* MyHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DF94C24D2C5FD000E2826 /* MyHeadView.swift */; };
+		430DF94F24D2E057000E2826 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DF94E24D2E057000E2826 /* Global.swift */; };
 		439ECEDF24C0691900B0F6BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439ECEDE24C0691900B0F6BD /* AppDelegate.swift */; };
 		439ECEE824C0691A00B0F6BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439ECEE724C0691A00B0F6BD /* Assets.xcassets */; };
 		439ECEEB24C0691A00B0F6BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439ECEE924C0691A00B0F6BD /* LaunchScreen.storyboard */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		03688867D129F0F9D8B589AF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		430DF94C24D2C5FD000E2826 /* MyHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeadView.swift; sourceTree = "<group>"; };
+		430DF94E24D2E057000E2826 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		439ECEDB24C0691900B0F6BD /* 机智如我.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "机智如我.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		439ECEDE24C0691900B0F6BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439ECEE724C0691A00B0F6BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		430DF94B24D2C5AD000E2826 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				430DF94C24D2C5FD000E2826 /* MyHeadView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		439ECED224C0691900B0F6BD = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +136,7 @@
 			children = (
 				439ECF0E24C06CA400B0F6BD /* Classes */,
 				439ECEDE24C0691900B0F6BD /* AppDelegate.swift */,
+				430DF94E24D2E057000E2826 /* Global.swift */,
 				439ECEE724C0691A00B0F6BD /* Assets.xcassets */,
 				439ECEE924C0691A00B0F6BD /* LaunchScreen.storyboard */,
 				439ECEEC24C0691A00B0F6BD /* Info.plist */,
@@ -175,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				439ECF1824C06E1C00B0F6BD /* MyVC.swift */,
+				430DF94B24D2C5AD000E2826 /* View */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -386,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430DF94D24D2C5FD000E2826 /* MyHeadView.swift in Sources */,
 				439ECF1724C06DF000B0F6BD /* UViewController.swift in Sources */,
 				439ECEDF24C0691900B0F6BD /* AppDelegate.swift in Sources */,
 				439ECF1924C06E1C00B0F6BD /* MyVC.swift in Sources */,
@@ -393,6 +408,7 @@
 				43A3D68A24D04BCE00391554 /* UHomeViewController.swift in Sources */,
 				439ECF1124C06CD400B0F6BD /* UNavigationController.swift in Sources */,
 				43A3D68C24D04BEB00391554 /* UCateListViewController.swift in Sources */,
+				430DF94F24D2E057000E2826 /* Global.swift in Sources */,
 				439ECF1B24C06E3400B0F6BD /* UTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

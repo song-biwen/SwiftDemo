@@ -12,7 +12,7 @@ class UViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
         configueUI()
     }
     
@@ -25,12 +25,26 @@ class UViewController: UIViewController {
     
     func configNavigationBar() {
         
-        guard let navi = navigationController else {return}
+        guard let navi = navigationController as? UNavigationController else {return}
         if navi.visibleViewController == self {
-//            navi.navigationBar.barStyle = .black
-            navi.navigationBar.setBackgroundImage(UIImage(named: "nav_bg"), for: .default)
-            navi.navigationBar.shadowImage = UIImage()
+            
+            navi.barStyle(UNavigationBarStyle.theme)
+            navi.disablePopGesture = false
+//            navi.setNavigationBarHidden(false, animated: true)
+            navi.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 20)]
+            if navi.viewControllers.count > 1 {
+                navi.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_white"), style: .done, target: self, action: #selector(pressBack))
+            }
         }
     }
+    
+    @objc func pressBack() {
+        navigationController?.popViewController(animated: true)
+    }
+}
 
+extension UViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

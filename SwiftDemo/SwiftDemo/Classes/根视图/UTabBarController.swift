@@ -39,7 +39,6 @@ class UTabBarController: UITabBarController {
     
     func addChildViewController(childVC:UViewController, title: String?, image: UIImage?, selectedImage: UIImage?) {
         
-        childVC.navigationController?.title = title
         childVC.title = title
         childVC.tabBarItem = UITabBarItem(title: nil, image: image?.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal))
         if (UIDevice.current.userInterfaceIdiom == .phone) {
