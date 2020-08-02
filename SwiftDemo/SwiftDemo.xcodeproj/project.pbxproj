@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		430DF94D24D2C5FD000E2826 /* MyHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DF94C24D2C5FD000E2826 /* MyHeadView.swift */; };
 		430DF94F24D2E057000E2826 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DF94E24D2E057000E2826 /* Global.swift */; };
+		433F65ED24D6C37F00682D79 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F65EB24D6C37F00682D79 /* MyCell.swift */; };
+		433F65EE24D6C37F00682D79 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433F65EC24D6C37F00682D79 /* MyCell.xib */; };
 		439ECEDF24C0691900B0F6BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439ECEDE24C0691900B0F6BD /* AppDelegate.swift */; };
 		439ECEE824C0691A00B0F6BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439ECEE724C0691A00B0F6BD /* Assets.xcassets */; };
 		439ECEEB24C0691A00B0F6BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439ECEE924C0691A00B0F6BD /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 		03688867D129F0F9D8B589AF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		430DF94C24D2C5FD000E2826 /* MyHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeadView.swift; sourceTree = "<group>"; };
 		430DF94E24D2E057000E2826 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		433F65EB24D6C37F00682D79 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		433F65EC24D6C37F00682D79 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		439ECEDB24C0691900B0F6BD /* 机智如我.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "机智如我.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		439ECEDE24C0691900B0F6BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439ECEE724C0691A00B0F6BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				430DF94C24D2C5FD000E2826 /* MyHeadView.swift */,
+				433F65EB24D6C37F00682D79 /* MyCell.swift */,
+				433F65EC24D6C37F00682D79 /* MyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439ECEEB24C0691A00B0F6BD /* LaunchScreen.storyboard in Resources */,
+				433F65EE24D6C37F00682D79 /* MyCell.xib in Resources */,
 				439ECEE824C0691A00B0F6BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +412,7 @@
 				439ECEDF24C0691900B0F6BD /* AppDelegate.swift in Sources */,
 				439ECF1924C06E1C00B0F6BD /* MyVC.swift in Sources */,
 				43A3D68E24D04BFC00391554 /* UBookViewController.swift in Sources */,
+				433F65ED24D6C37F00682D79 /* MyCell.swift in Sources */,
 				43A3D68A24D04BCE00391554 /* UHomeViewController.swift in Sources */,
 				439ECF1124C06CD400B0F6BD /* UNavigationController.swift in Sources */,
 				43A3D68C24D04BEB00391554 /* UCateListViewController.swift in Sources */,
