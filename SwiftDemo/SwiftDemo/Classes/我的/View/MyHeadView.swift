@@ -11,7 +11,7 @@ import SnapKit
 
 class MyHeadView: UIView {
     
-    private lazy var bgImgView:UIImageView = {
+    lazy var bgImgView:UIImageView = {
         let bgImgView = UIImageView()
         bgImgView.contentMode = .scaleAspectFill
         return bgImgView
