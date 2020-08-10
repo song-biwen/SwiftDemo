@@ -59,6 +59,20 @@ class MyVC: UViewController {
     }()
     
    
+    private lazy var tableView:UITableView = {
+           
+        let tabView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight), style: .grouped)
+        tabView.delegate = self
+        tabView.dataSource = self
+        tabView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MyCell")
+        tabView.separatorStyle = .none
+        tabView.backgroundColor = .clear
+        tabView.autoresizingMask = [.flexibleHeight]
+        tabView.tableHeaderView = headerView
+
+        return tabView
+       
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,19 +92,6 @@ class MyVC: UViewController {
         view.addSubview(headerBgImageView)
         view.addSubview(tableView)
     }
-    
-    private lazy var tableView:UITableView = {
-        
-        let tabView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight), style: .grouped)
-        tabView.delegate = self
-        tabView.dataSource = self
-        tabView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MyCell")
-        tabView.separatorStyle = .none
-        tabView.backgroundColor = .clear
-        tabView.tableHeaderView = headerView
-        
-        return tabView
-    }()
     
 
 }
@@ -154,6 +155,7 @@ extension MyVC: UITableViewDelegate, UITableViewDataSource {
         }else {
             
             headerBgImageView.frame = CGRect(x: 0, y: -y, width: ScreenWidth, height: height)
+            
         }
         
         
